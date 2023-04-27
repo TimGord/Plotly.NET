@@ -17,11 +17,11 @@ let ``Html layout tests`` =
             |> substringIsInChart Chart2DTestCharts.Point.``Point chart with axis labels and title`` toEmbeddedHTML 
         );
         testCase "Expecting data" ( fun () ->
-            """var data = [{"type":"scatter","mode":"markers","x":[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0],"y":[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0],"marker":{},"line":{}}];"""
+            Chart2DJsonReference.Point.``Point chart with axis labels and title``.Data
             |> chartGeneratedContains Chart2DTestCharts.Point.``Point chart with axis labels and title``
         );
         testCase "Expecting layout info" (fun () ->
-            """var layout = {"title":{"text":"Hello world!"},"xaxis":{"title":{"text":"xAxis"},"showgrid":false},"yaxis":{"title":{"text":"yAxis"},"showgrid":false}};"""
+            Chart2DJsonReference.Point.``Point chart with axis labels and title``.Layout
             |> chartGeneratedContains Chart2DTestCharts.Point.``Point chart with axis labels and title``
         );
         testCase "Expecting html tags in embedded page only" (fun () ->

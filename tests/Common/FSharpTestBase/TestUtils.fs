@@ -185,7 +185,6 @@ module HtmlCodegen =
         |> Expect.stringContains
         |> (fun expecting -> expecting substring $"Should've contained {substring}")
 
-
     let substringListIsInChart chart htmlizer substringList =
         for substring in substringList do
             substringIsInChart chart htmlizer substring

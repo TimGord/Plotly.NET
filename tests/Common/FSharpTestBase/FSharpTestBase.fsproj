@@ -17,7 +17,12 @@
     <Compile Include="TestCharts\Chart3DTestCharts.fs" />
     <Compile Include="TestCharts\ChartMapTestCharts.fs" />
     <Compile Include="TestCharts\ChartDomainTestCharts.fs" />
+    <Content Include="jsonreferences\chart2d\Point_chart_with_axis_labels_and_title.json" />
+    <Compile Include="JsonReferences\JsonReference.fs" />
+    <Compile Include="JsonReferences\Chart2DJsonReference.fs" />
   </ItemGroup>
+  
+  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="Deedle" Version="2.4.1" />
@@ -27,6 +32,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Plotly.NET\Plotly.NET.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="JsonReferences\Chart2D\**" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>
